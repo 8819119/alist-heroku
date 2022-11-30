@@ -3,7 +3,7 @@ FROM xiaoyaliu/alist:latest
 MAINTAINER cooluc <admin@cooluc.com>
 
 RUN chmod -R 777 /opt/alist/data
-ADD alist.sh /alist.sh
-RUN chmod +x /alist.sh
+#ADD alist.sh /alist.sh
+#RUN chmod +x /alist.sh
 
-CMD /alist.sh
+#CMD /alist.sh
