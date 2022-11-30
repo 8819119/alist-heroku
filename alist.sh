@@ -1,8 +1,8 @@
 # 创建配置文件目录
 #mkdir -p /alist/config/temp
-mkdir -p /alist/data/temp
+mkdir -p /opt/alist/data/temp
 
-cat >/alist/data/config.json <<EOF
+cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": $PORT,
@@ -15,7 +15,7 @@ cat >/alist/data/config.json <<EOF
     "port": $ESQLPORT,
     "name": "$FSQLNAME",
     "table_prefix": "x_",
-    "db_file": "/alist/data/data.db"
+    "db_file": "/opt/alist/data/data.db"
   },
   "scheme": {
     "https": false,
@@ -26,9 +26,9 @@ cat >/alist/data/config.json <<EOF
     "expiration": $GEXPIRATION,
     "cleanup_interval": $HCLEANUP_INTERVAL
   },
-  "temp_dir": "/alist/data/temp"
+  "temp_dir": "/opt/alist/data/temp"
 }
 EOF
 
-cd /alist
+cd /opt/alist
 ./alist -conf data/config.json
