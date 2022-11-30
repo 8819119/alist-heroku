@@ -2,7 +2,7 @@ FROM xiaoyaliu/alist:latest
 #xhofe/alist:main
 MAINTAINER cooluc <admin@cooluc.com>
 
-RUN chmod -R 777 /alist/data
+RUN chmod -R 777 /opt/alist/data
 ADD alist.sh /alist.sh
 RUN chmod +x /alist.sh
 
