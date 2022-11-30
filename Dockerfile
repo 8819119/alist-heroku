@@ -1,9 +1,9 @@
 FROM xiaoyaliu/alist:latest
 #xhofe/alist:main
-MAINTAINER cooluc <admin@cooluc.com>
 
-RUN chmod -R 777 /opt/alist/data
-#ADD alist.sh /alist.sh
-#RUN chmod +x /alist.sh
+LABEL MAINTAINER="i@nn.ci"
+WORKDIR /opt/alist/
 
-#CMD /alist.sh
+EXPOSE 5244
+
+ENTRYPOINT [ "./alist", "-docker" ]
